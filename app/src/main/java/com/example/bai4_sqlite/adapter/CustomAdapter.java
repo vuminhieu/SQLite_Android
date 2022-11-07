@@ -19,14 +19,14 @@ import java.util.List;
 public class CustomAdapter extends ArrayAdapter<Student> {
     private Context context;
     private int resource;
-    private List<Student> studentList;
+    private List<Student> list;
 
 
     public CustomAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Student> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;
-        this.studentList = objects;
+        this.list = objects;
     }
 
     @NonNull
@@ -45,13 +45,12 @@ public class CustomAdapter extends ArrayAdapter<Student> {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        Student student = studentList.get(position);
+        Student student = list.get(position);
         viewHolder.textView_id.setText(String.valueOf(student.getmID()));
         viewHolder.textView_name.setText(student.getmName());
         viewHolder.textView_address.setText(student.getmAddress());
         viewHolder.textView_email.setText(student.getmEmail());
         viewHolder.textView_phone.setText(student.getmPhoneNumber());
-
 
         return convertView;
     }

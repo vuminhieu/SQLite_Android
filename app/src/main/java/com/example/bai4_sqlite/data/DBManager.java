@@ -41,7 +41,6 @@ public class DBManager extends SQLiteOpenHelper {
             PHONE_NUMBER + " TEXT, " +
             ADDRESS + " TEXT)";
 
-    // khoi tao cai table name
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQLQuery);
@@ -71,7 +70,7 @@ public class DBManager extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
-        if (cursor.moveToFirst()) { //ket qua tra ve it nhat 1 gia tri
+        if (cursor.moveToFirst()) {
             do {
                 Student student = new Student();
                 student.setmID(cursor.getInt(0));
@@ -82,7 +81,7 @@ public class DBManager extends SQLiteOpenHelper {
 
                 ListStudent.add(student);
             }
-            while (cursor.moveToNext()); // sau ket qua do con ket qua khac khong
+            while (cursor.moveToNext());
         }
         db.close();
         return ListStudent;

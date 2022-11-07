@@ -9,6 +9,20 @@ public class Student {
 
     public Student() {
     }
+    public Student(String mName, String mAddress, String mPhoneNumber, String mEmail) {
+        this.mName = mName;
+        this.mAddress = mAddress;
+        this.mPhoneNumber = mPhoneNumber;
+        this.mEmail = mEmail;
+    }
+
+    public Student(int mID, String mName, String mAddress, String mPhoneNumber, String mEmail) {
+        this.mID = mID;
+        this.mName = mName;
+        this.mAddress = mAddress;
+        this.mPhoneNumber = mPhoneNumber;
+        this.mEmail = mEmail;
+    }
 
     public int getmID() {
         return mID;
@@ -50,18 +64,5 @@ public class Student {
         this.mEmail = mEmail;
     }
 
-    public Student(String mName, String mAddress, String mPhoneNumber, String mEmail) {
-        this.mName = mName;
-        this.mAddress = mAddress;
-        this.mPhoneNumber = mPhoneNumber;
-        this.mEmail = mEmail;
-    }
 
-    public Student(int mID, String mName, String mAddress, String mPhoneNumber, String mEmail) {
-        this.mID = mID;
-        this.mName = mName;
-        this.mAddress = mAddress;
-        this.mPhoneNumber = mPhoneNumber;
-        this.mEmail = mEmail;
-    }
 }
