@@ -106,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         //xoa
         listView_Student.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override

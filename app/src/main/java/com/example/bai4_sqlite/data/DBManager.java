@@ -70,7 +70,7 @@ public class DBManager extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
-        if (cursor.moveToFirst()) {
+        if (cursor.moveToFirst()) { // database co it nhat 1 gia tri
             do {
                 Student student = new Student();
                 student.setmID(cursor.getInt(0));
